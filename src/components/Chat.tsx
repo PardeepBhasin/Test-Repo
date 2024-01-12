@@ -46,7 +46,7 @@ const Chat = () => {
                         {
                             users && users.map((user: any) => {
                                 return (
-                                    <div className='flex gap-2'>
+                                    <div key={Math.random()} className='flex gap-2'>
                                         <button className={`flex flex-col gap-1 p-3 w-full ${selectedUser && selectedUser.userID === user.userID && 'bg-purple-800'
                                             }`} onClick={() => setSelectedUser(user)}>
                                             <div className='text-white'>{user.username} {user.self && '(Me)'}</div>
@@ -82,11 +82,11 @@ const Chat = () => {
                                 selectedUser && users && users.map((user: any) => {
                                     if (user.userID === selectedUser.userID) {
                                         return (
-                                            <div>
+                                            <div key={Math.random()}>
                                                 {
                                                     user.messages && user.messages.map((message: any) => {
                                                         return (
-                                                            <div className={`flex flex-col gap-1 mb-6 ${message.fromSelf ? 'text-green-500' : 'text-red-500'}`}>
+                                                            <div key={Math.random()} className={`flex flex-col gap-1 mb-6 ${message.fromSelf ? 'text-green-500' : 'text-red-500'}`}>
                                                                 <div>{message.fromSelf ? '(Me)' : selectedUser.username}</div>
                                                                 <div>{message.content}</div>
                                                             </div>
