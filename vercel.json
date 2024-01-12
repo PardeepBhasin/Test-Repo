@@ -1,0 +1,5 @@
+{
+    "rewrites": [
+      { "source": "/api/(.*)", "destination": "http://mychatapp-env.eba-w3wfj4wd.ap-south-1.elasticbeanstalk.com" }
+    ]
+}

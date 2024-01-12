@@ -7,7 +7,7 @@ class MySocket {
     public users: any[] = [];
     public selectedUser: any = null;
     constructor() {
-        this.URL = "http://mychatapp-env.eba-w3wfj4wd.ap-south-1.elasticbeanstalk.com";
+        this.URL = "https://mychatapp-env.eba-w3wfj4wd.ap-south-1.elasticbeanstalk.com";
         console.log("URL++++++++++++++", this.URL);
         this.socket = io(this.URL, { autoConnect: false });
         this.socket.onAny((event: any, ...args: any) => {
